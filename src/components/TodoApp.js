@@ -28,7 +28,7 @@ function TodoApp() {
         // get the id from localstorage
         const id = localStorage.user_id;
         try {
-            const response = await fetch(`https://fourpairstodoappserver.herokuapp.com/${id}`);
+            const response = await fetch(`https://fourpairstodoappserver.herokuapp.com/users/${id}`);
             const data = await response.json();
 
             setName(data.name);
