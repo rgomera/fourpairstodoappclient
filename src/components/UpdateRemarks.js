@@ -11,7 +11,7 @@ const UpdateRemarks = ({ todo }) => {
             else remarks = 'In Progress';
 
             const body = { remarks };
-            const response = await fetch(`https://fourpairstodoappserver.herokuapp.com/${id}/${user_id}`, {
+            const response = await fetch(`https://fourpairstodoappserver.herokuapp.com/todos/update_remarks/${id}/${user_id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body),
